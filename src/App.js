@@ -1,12 +1,14 @@
 import React from 'react';
 import { Switch, Route, Redirect } from 'react-router-dom';
-import LandingPage from './pages/Landing-Page';
+import LandingPage from './pages/Landing-Page/Landing-Page';
 
 import './App.css';
 
 function App() {
   return (
-    <LandingPage />
+    <div className='container-fluid'>
+      <LandingPage />
+    </div>
   );
 }
 
