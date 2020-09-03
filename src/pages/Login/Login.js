@@ -6,7 +6,7 @@ import './Login.scss';
 
 const Login = () => {
   return (
-    <div className='container login-container'>
+    <div className='login-container'>
       <div className='row'>
         <div className='col-12 col-sm-12 col-md-12'>
           <h2>Welcome to Job Seeker Platform!</h2>
