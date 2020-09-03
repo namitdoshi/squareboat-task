@@ -35,7 +35,7 @@ const Login = () => {
               </Label>
             </FormGroup>
           </FormGroup>
-          <Button>Log In</Button>
+          <Button color='success'>Log In</Button>
         </Form>
         </div>
 
