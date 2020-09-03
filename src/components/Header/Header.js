@@ -26,7 +26,11 @@ const Header = () => {
               <NavLink href="#">About us</NavLink>
             </NavItem>
           </Nav>
-          <NavbarText>Login</NavbarText>
+          <Nav navbar>
+            <NavItem>
+              <NavLink href='/login'>Login</NavLink>
+            </NavItem>
+          </Nav>
         </Collapse>
       </Navbar>
     </div>
