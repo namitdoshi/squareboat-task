@@ -5,6 +5,7 @@ import Header from './components/Header/Header';
 import LandingPage from './pages/Landing-Page/Landing-Page';
 import Login from './pages/Login/Login';
 import Signup from './pages/Signup/Signup';
+import RecruiterSignup from './pages/Recruiter-Signup/Recruiter-Signup'
 
 import './App.css';
 
@@ -17,6 +18,7 @@ function App() {
           <Route exact path='/' component={LandingPage} />
           <Route path='/login' component={Login} />
           <Route path='/signup' component={Signup} />
+          <Route path='/signup/recruiter' component={RecruiterSignup} />
         </Switch>
       </div>
     </div>
