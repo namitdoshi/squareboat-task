@@ -10,9 +10,15 @@ function App() {
   return (
     <div className='container-fluid'>
       <Header />
-      <LandingPage />
+      <div style={styleSheet}>
+        <LandingPage />
+      </div>
     </div>
   );
+}
+
+const styleSheet = {
+  marginTop: '7vh'
 }
 
 export default App;
