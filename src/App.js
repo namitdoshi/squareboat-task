@@ -3,6 +3,7 @@ import { Switch, Route, Redirect } from 'react-router-dom';
 
 import Header from './components/Header/Header';
 import LandingPage from './pages/Landing-Page/Landing-Page';
+import Login from './pages/Login/Login'
 
 import './App.css';
 
@@ -11,7 +12,10 @@ function App() {
     <div className='container-fluid'>
       <Header />
       <div style={styleSheet}>
-        <LandingPage />
+        <Switch>
+          <Route exact path='/' component={LandingPage} />
+          <Route path='/login' component={Login} />
+        </Switch>
       </div>
     </div>
   );
