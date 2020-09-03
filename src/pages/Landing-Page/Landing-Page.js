@@ -1,11 +1,11 @@
 import React from 'react';
 
-import Header from '../../components/Header/Header'
+import AboutUs from '../../components/About-Us/About-Us'
 
 const LandingPage = () => {
   return (
     <div>
-      <Header />
+      <AboutUs />
     </div>
   )
 }
