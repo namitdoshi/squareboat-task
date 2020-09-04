@@ -1,9 +1,11 @@
 import React from 'react';
 import { Table, Button } from 'reactstrap';
 
+import './Job-Seeker-Home.scss'
+
 const JobSeekerHome = () => {
   return (
-    <div>
+    <div className='my-container'>
       <h2>Welcome Job Seeker!</h2>
       <h4>These are the available jobs</h4>
       <Table dark>
