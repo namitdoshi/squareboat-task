@@ -4,11 +4,13 @@ import { Link, Route } from 'react-router-dom';
 
 import './Signup.scss';
 import RecruiterSignup from '../Recruiter-Signup/Recruiter-Signup'
+import JobSeekerSignup from '../Job-Seeker-Signup/Job-Seeker-Signup';
 
 const Signup = () => {
   return (
     <div className='container'>
-    <Route path='/signup/recruiter' component={RecruiterSignup} />
+    <Route exact path='/signup/recruiter' component={RecruiterSignup} />
+    <Route exact path='/signup/job-seeker' component={JobSeekerSignup} />
       <h2>Sign Up</h2>
       <div className='row'>
         <div className='col-sm-12 col-md-6'>
@@ -24,7 +26,7 @@ const Signup = () => {
           <p>
           Join over 7 million job seekers, practice coding skills, apply for jobs, give interviews, and get hired.
           </p>
-          <a href='/'><Button color='success'>Sign Up & Search</Button></a>
+          <Link to='/signup/jobseeker'><Button color='success'>Sign Up & Search</Button></Link>
           <p>Already have an Account? <a href='/login'>Login</a></p>
         </div>
       </div>
