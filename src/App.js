@@ -7,6 +7,7 @@ import Login from './pages/Login/Login';
 import Signup from './pages/Signup/Signup';
 import RecruiterSignup from './pages/Recruiter-Signup/Recruiter-Signup'
 import JobSeekerSignup from './pages/Job-Seeker-Signup/Job-Seeker-Signup'
+import Home from './pages/Home/Home';
 
 import './App.css';
 
@@ -21,6 +22,7 @@ function App() {
           <Route exact path='/signup' component={Signup} />
           <Route path='/signup/recruiter' component={RecruiterSignup} />
           <Route path='/signup/job-seeker' component={JobSeekerSignup} />
+          <Route path='/home' component={Home} />
         </Switch>
       </div>
     </div>
