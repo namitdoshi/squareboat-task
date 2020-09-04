@@ -6,8 +6,9 @@ import JobSeekerHome from '../../components/Job-Seeker-Home/Job-Seeker-Home';
 const Home = () => {
   return (
     <div>
-      {/*<RecruiterHome /> */}
-      <JobSeekerHome />
+      {/* <JobSeekerHome /> */}
+      <RecruiterHome />
+      
     </div>
   )
 }
