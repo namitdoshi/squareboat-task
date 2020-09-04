@@ -3,6 +3,7 @@ import { TabContent, TabPane, Nav, NavItem, NavLink, Row, Col } from 'reactstrap
 import classnames from 'classnames';
 
 import PostJob from '../Post-job/Post-Job';
+import AppliedJobs from '../Applied-Jobs/Applied-Jobs';
 
 const RecruiterHome = (props) => {
   const [activeTab, setActiveTab] = useState('1');
@@ -44,7 +45,7 @@ const RecruiterHome = (props) => {
         </Row>
       </TabPane>
       <TabPane tabId="2">
-      <h4>Tab 2 Contents</h4>
+      <AppliedJobs />
       </TabPane>
     </TabContent>
 

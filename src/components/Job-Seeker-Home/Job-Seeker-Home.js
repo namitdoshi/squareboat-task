@@ -25,7 +25,7 @@ const JobSeekerHome = () => {
             <td><Button color='primary'>Apply</Button></td>
           </tr>
         </tbody>
-    </Table>
+      </Table>
     </div>
   )
 }
