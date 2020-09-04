@@ -1,12 +1,14 @@
 import React from 'react';
 import { Button } from 'reactstrap';
-import { Link } from 'react-router-dom';
+import { Link, Route } from 'react-router-dom';
 
 import './Signup.scss';
+import RecruiterSignup from '../Recruiter-Signup/Recruiter-Signup'
 
 const Signup = () => {
   return (
     <div className='container'>
+    <Route path='/signup/recruiter' component={RecruiterSignup} />
       <h2>Sign Up</h2>
       <div className='row'>
         <div className='col-sm-12 col-md-6'>
