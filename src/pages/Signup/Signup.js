@@ -26,7 +26,7 @@ const Signup = () => {
           <p>
           Join over 7 million job seekers, practice coding skills, apply for jobs, give interviews, and get hired.
           </p>
-          <Link to='/signup/jobseeker'><Button color='success'>Sign Up & Search</Button></Link>
+          <Link to='/signup/job-seeker'><Button color='success'>Sign Up & Search</Button></Link>
           <p>Already have an Account? <a href='/login'>Login</a></p>
         </div>
       </div>
