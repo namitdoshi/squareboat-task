@@ -14,7 +14,15 @@ const Header = () => {
   const [isOpen, setIsOpen] = useState(false);
 
   const toggle = () => setIsOpen(!isOpen);
-
+  
+  var userEmail = ''
+  var email = localStorage.getItem('userEmail')
+  if (email !== null) {
+    userEmail = email
+    console.log(email)
+    console.log(userEmail)
+  }
+  
   return (
     <div>
       <Navbar color="dark" dark expand="md" fixed="top">
@@ -31,7 +39,13 @@ const Header = () => {
           </Nav>
           <Nav navbar>
             <NavItem>
-              <NavLink href='/login'>Login</NavLink>
+              {userEmail ?  
+              (<NavLink href='/login'>Logout</NavLink>)
+
+              :
+
+              (<NavLink href='/login'>Login</NavLink>)
+              }
             </NavItem>
           </Nav>
         </Collapse>
