@@ -43,6 +43,7 @@ class JobSeekerLogin extends Component {
         // console.log(1)
         localStorage.setItem('userType', 'jobSeeker')
         localStorage.setItem('userEmail', this.state.email)
+        window.location.href = '/home'
       }
     });
 
