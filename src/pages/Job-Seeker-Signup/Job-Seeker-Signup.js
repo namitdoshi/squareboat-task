@@ -23,10 +23,10 @@ class JobSeekerSignup extends Component {
 
   handleSubmit = (event) => {
     event.preventDefault();
-    // let apiBaseUrl = "http://localhost:3000/";
     let payload = {
       "email": this.state.email,
-      "password": this.state.password
+      "password": this.state.password,
+      "companyName": this.state.companyName
     };
     
     axios.post('/signup-job-seeker', payload)
