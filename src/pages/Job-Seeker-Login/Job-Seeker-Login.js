@@ -12,7 +12,6 @@ class JobSeekerLogin extends Component {
     this.state = {
       email: '',
       password: '',
-      userType: ''
     }
   }
 
@@ -37,9 +36,14 @@ class JobSeekerLogin extends Component {
       "password": this.state.password
     };
     
-    axios.post('/signup-job-seeker', payload)
+    axios.post('/login-job-seeker', payload)
     .then(response => {
       console.log(response)
+      if(response.data.status == 200) {
+        // console.log(1)
+        localStorage.setItem('userType', 'jobSeeker')
+        localStorage.setItem('userEmail', this.state.email)
+      }
     });
 
   }
@@ -60,7 +64,7 @@ class JobSeekerLogin extends Component {
               <Label for="examplePassword">Password</Label>
               <Input type="password" name="password" id="examplePassword" placeholder="your password here" onChange={this.handleChange} required  />
             </FormGroup>
-            <Button color='success'>Log In</Button>
+            <Button color='success' onClick={this.handleSubmit} >Log In</Button>
           </Form>
           </div>
 
