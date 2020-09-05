@@ -13,8 +13,11 @@ class JobSeekerLogin extends Component {
       email: '',
       password: '',
     }
+    if (localStorage.getItem('userEmail') !== null) {
+      window.location.href = '/home'
+    }
   }
-
+  
   handleChange = (event) => {
     const {value,name} = event.target
 

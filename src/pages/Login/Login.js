@@ -3,6 +3,10 @@ import React from 'react';
 import Auth from '../../components/Auth/Auth'
 
 const Sign = () => {
+  if (localStorage.getItem('userEmail') !== null) {
+    window.location.href = '/home'
+  }
+
   return (
     <Auth 
       btn1='Log in & Hire' 

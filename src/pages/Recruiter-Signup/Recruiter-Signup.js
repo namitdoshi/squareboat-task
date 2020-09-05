@@ -14,6 +14,10 @@ class RecruiterSignup extends Component {
       comapanyName: '',
       password: ''
     }
+    
+    if (localStorage.getItem('userEmail') !== null) {
+      window.location.href = '/home'
+    }
   }
 
   handleChange = (event) => {
