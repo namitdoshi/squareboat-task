@@ -10,18 +10,23 @@ import {
   NavbarText
 } from 'reactstrap';
 
+const handleLogout = () => {
+  localStorage.clear()
+  window.location.href = '/'
+}
+
 const Header = () => {
   const [isOpen, setIsOpen] = useState(false);
 
   const toggle = () => setIsOpen(!isOpen);
   
-  var userEmail = ''
+  // var userEmail = ''
   var email = localStorage.getItem('userEmail')
-  if (email !== null) {
-    userEmail = email
-    console.log(email)
-    console.log(userEmail)
-  }
+  // if (email !== null) {
+  //   userEmail = email
+  //   console.log(email)
+  //   console.log(userEmail)
+  // }
   
   return (
     <div>
@@ -39,8 +44,8 @@ const Header = () => {
           </Nav>
           <Nav navbar>
             <NavItem>
-              {userEmail ?  
-              (<NavLink href='/login'>Logout</NavLink>)
+              {email ?  
+              (<NavLink href='#' onClick={handleLogout} >Logout</NavLink>)
 
               :
 
