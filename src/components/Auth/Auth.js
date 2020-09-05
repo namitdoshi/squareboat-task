@@ -19,7 +19,7 @@ const Auth = (props) => {
           <p>
             We are the market–leading job seeker's platform to identify and hire developers with the right skills.
           </p>
-          <Link to='/signup/recruiter'><Button color='success'>{props.btn1}</Button></Link>
+          <Link to={props.btnURL1}><Button color='success'>{props.btn1}</Button></Link>
           <p>{props.text1} <Link to={props.authURL}>{props.auth}</Link></p>
         </div>
         <div className='col-sm-12 col-md-6'>
@@ -27,7 +27,7 @@ const Auth = (props) => {
           <p>
           Join over 7 million job seekers, practice coding skills, apply for jobs, give interviews, and get hired.
           </p>
-          <Link to='/signup/job-seeker'><Button color='success'>{props.btn2}</Button></Link>
+          <Link to={props.btnURL2}><Button color='success'>{props.btn2}</Button></Link>
           <p>{props.text1} <a href={props.authURL}>{props.auth}</a></p>
         </div>
       </div>
