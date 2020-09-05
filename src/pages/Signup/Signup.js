@@ -1,38 +1,18 @@
 import React from 'react';
-import { Button } from 'reactstrap';
-import { Link, Route } from 'react-router-dom';
 
-import './Signup.scss';
-import RecruiterSignup from '../Recruiter-Signup/Recruiter-Signup'
-import JobSeekerSignup from '../Job-Seeker-Signup/Job-Seeker-Signup';
+import Auth from '../../components/Auth/Auth'
 
-const Signup = () => {
+const Sign = () => {
   return (
-    <div className='container'>
-    <Route exact path='/signup/recruiter' component={RecruiterSignup} />
-    <Route exact path='/signup/job-seeker' component={JobSeekerSignup} />
-      <h2>Sign Up</h2>
-      <div className='row'>
-        <div className='col-sm-12 col-md-6'>
-          <h3>For Recruiters</h3>
-          <p>
-            We are the market–leading job seeker's platform to identify and hire developers with the right skills.
-          </p>
-          <Link to='/signup/recruiter'><Button color='success'>Sign Up & Hire</Button></Link>
-          <p>Already have a Member? <Link to='/login'>Login</Link></p>
-        </div>
-        <div className='col-sm-12 col-md-6'>
-          <h3>For Job Seekers</h3>
-          <p>
-          Join over 7 million job seekers, practice coding skills, apply for jobs, give interviews, and get hired.
-          </p>
-          <Link to='/signup/job-seeker'><Button color='success'>Sign Up & Search</Button></Link>
-          <p>Already have an Account? <a href='/login'>Login</a></p>
-        </div>
-      </div>
-      
-    </div>
+    <Auth 
+      btn1='Sign up & Hire' 
+      btn2='Sign up & Search'
+      text1='Already have an Account?'
+      auth='Login'
+      authURL='/login'
+    
+    />
   )
-};
+}
 
-export default Signup;
+export default Sign;
