@@ -26,12 +26,17 @@ class JobSeekerSignup extends Component {
     let payload = {
       "email": this.state.email,
       "password": this.state.password,
-      "companyName": this.state.companyName
     };
     
     axios.post('/signup-job-seeker', payload)
     .then(response => {
       console.log(response)
+      if(response.data.status == 200) {
+        // console.log(1)
+        localStorage.setItem('userType', 'jobSeeker')
+        localStorage.setItem('userEmail', this.state.email)
+      }
+      window.location.href = '/home';
     });
 
   }
