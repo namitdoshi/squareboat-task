@@ -12,7 +12,6 @@ class RecruiterLogin extends Component {
     this.state = {
       email: '',
       password: '',
-      userType: ''
     }
   }
 
@@ -23,13 +22,6 @@ class RecruiterLogin extends Component {
     console.log(this.state)
   }
 
-  handleRadioInput = (event) => {
-    const name = event.target.name
-    const value = event.target.value
-    this.setState({userType: value})
-    console.log(this.state)
-  }
-
   handleSubmit = (event) => {
     event.preventDefault();
     let payload = {
@@ -37,7 +29,7 @@ class RecruiterLogin extends Component {
       "password": this.state.password
     };
     
-    axios.post('/signup-job-seeker', payload)
+    axios.post('/login-recruiter', payload)
     .then(response => {
       console.log(response)
     });
@@ -60,7 +52,7 @@ class RecruiterLogin extends Component {
               <Label for="examplePassword">Password</Label>
               <Input type="password" name="password" id="examplePassword" placeholder="your password here" onChange={this.handleChange} required  />
             </FormGroup>
-            <Button color='success'>Log In</Button>
+            <Button color='success' onClick={this.handleSubmit}>Log In</Button>
           </Form>
           </div>
 
