@@ -32,6 +32,12 @@ class RecruiterLogin extends Component {
     axios.post('/login-recruiter', payload)
     .then(response => {
       console.log(response)
+      if(response.data.status == 200) {
+        // console.log(1)
+        localStorage.setItem('userType', 'recruiter')
+        localStorage.setItem('userEmail', this.state.email)
+      }
+      window.location.href = '/home';
     });
 
   }
